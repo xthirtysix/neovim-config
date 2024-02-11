@@ -18,14 +18,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
-
 require("lazy").setup("plugins")
 
-local ts_configs = require("nvim-treesitter.configs")
-
-ts_configs.setup({
-    ensure_installed = { "lua", "go", "javascript", "html", "css" },
-    highlight = { enable = true },
-    indent = { enable = true },  
-})
