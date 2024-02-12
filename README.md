@@ -13,8 +13,9 @@
     - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
     - [nvim-lspconfig](https://www.google.com/search?q=git+neovim/nvim-lspconfig&sourceid=chrome&ie=UTF-8)
     - [telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim) - telescope plugin that displays modal with code actions picker
+- [none-ls](https://github.com/nvimtools/none-ls.nvim) - code formatting settings
 
-## Keymappings
+## Key mappings
 | Keymap       |  Association       | Description                                   |
 |--------------|--------------------|-----------------------------------------------|
 | `<leader>tf` | _telescope find_   | Search for the file in current dir            |
@@ -26,5 +27,6 @@
 | `<leader>hp` | _harpoon prev_     | Switch to the previous marked buffer          |
 | `<leader>ld` | _lsp definition_   | Go to definition of entity under cursor       |
 | `<leader>lD` | _lsp Declaration_  | Go to declaration of entity under cursor      |
-| `<leader>li` | _lsp info_         | Display info about entity udner cursor        |
+| `<leader>li` | _lsp info_         | Display info about entity under cursor        |
+| `<leader>lf` | _lsp format_       | Format opened file                            |
 | `<leader>ca` | _code actions_     | Display modal with possible code action       |
