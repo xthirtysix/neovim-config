@@ -17,7 +17,7 @@ return {
                     palette = {},
                     theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
                 },
-                overrides = function(colors) -- add/modify highlights
+                overrides = function() -- add/modify highlights
                     return {}
                 end,
                 theme = "wave",              -- Load "wave" theme when 'background' option is not set
@@ -25,7 +25,7 @@ return {
                     dark = "wave",           -- try "dragon" !
                     light = "lotus"
                 }
-            }   
+            }
         end,
         config = function()
             vim.cmd("colorscheme kanagawa")
