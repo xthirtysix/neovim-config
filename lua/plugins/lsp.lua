@@ -13,7 +13,8 @@ return {
                     "lua_ls",
                     "tsserver",
                     "gopls"
-                }
+                },
+                auto_install = true
             })
         end
     },
