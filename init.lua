@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
 local options = {
+    filetype = 'on',
     signcolumn = 'yes',
     tabstop = 4,
     shiftwidth = 4,
@@ -34,5 +35,15 @@ local options = {
 for index, value in pairs(options) do
     vim.opt[index] = value
 end
+
+vim.filetype.add({
+  extension = {
+    cls = 'apex',
+    apex = 'apex',
+    trigger = 'apex',
+    soql = 'soql',
+    sosl = 'sosl',
+  }
+})
 
 require('lazy').setup 'plugins'
