@@ -7,8 +7,12 @@ return {
 
         null_ls.setup {
             sources = {
-                null_ls.builtins.formatting.stylua,
+                -- JS/TS
                 null_ls.builtins.formatting.prettier,
+                -- Lua
+                null_ls.builtins.formatting.stylua,
+                -- Go
+                -- Common
                 null_ls.builtins.diagnostics.cspell,
                 null_ls.builtins.completion.spell,
                 cspell.code_actions,

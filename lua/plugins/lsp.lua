@@ -10,9 +10,14 @@ return {
         config = function()
             require('mason-lspconfig').setup {
                 ensure_installed = {
+                    -- lua
                     'lua_ls',
+                    -- js/ts
                     'tsserver',
+                    -- go
                     'gopls',
+                    -- salesforce,
+                    'apex_ls'
                 },
                 auto_install = true,
             }
