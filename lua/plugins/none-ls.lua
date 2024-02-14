@@ -21,8 +21,9 @@ return {
                 null_ls.builtins.formatting.stylua,
                 -- Go
                 -- Common
+                null_ls.builtins.formatting.markdownlint,
                 null_ls.builtins.diagnostics.typos,
-                null_ls.builtins.completion.spell,
+                --null_ls.builtins.completion.spell,
                 --cspell.code_actions,
             },
         }
