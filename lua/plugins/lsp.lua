@@ -3,15 +3,16 @@ return {
     {
         'neovim/nvim-lspconfig',
         dependencies = {
-            {'williamboman/mason.nvim',
-                config = true, opts = {}
+            {
+                'williamboman/mason.nvim',
+                config = true,
+                opts = {},
             },
-            {'williamboman/mason-lspconfig.nvim'},
+            { 'williamboman/mason-lspconfig.nvim' },
         },
         lazy = false,
         config = function()
-
-            local mason_lspconfig = require('mason-lspconfig')
+            local mason_lspconfig = require 'mason-lspconfig'
 
             mason_lspconfig.setup {
                 ensure_installed = {
@@ -53,8 +54,6 @@ return {
                 root_dir = lspconfig.util.root_pattern 'sfdx-project.json',
                 on_attach = on_attach,
                 capabilities = capabilities,
-                --cmd = { 'java', '-jar', '~/.apex-jorje-lsp.jar' },
-                --apex_jar_path = '/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home',
             }
 
             vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { desc = 'Go to definition' })
