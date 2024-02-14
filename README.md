@@ -1,21 +1,31 @@
 # Neovim config
 
 ## Colorscheme
+
 - [kanagawa](https://github.com/rebelot/kanagawa.nvim?tab=readme-ov-file)
 
 ## Plugins
+
 - [lazy](https://github.com/folke/lazy.nvim) - package manager
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) - fuzzy finder
 - [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter) - improved syntax highlighting
 - [harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - mark buffers and switch between them with ease
 - __LSP Suite__ - enables Language Server Protocol features
-    - [mason](https://github.com/williamboman/mason.nvim)
-    - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
-    - [nvim-lspconfig](https://www.google.com/search?q=git+neovim/nvim-lspconfig&sourceid=chrome&ie=UTF-8)
-    - [telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim) - telescope plugin that displays modal with code actions picker
+  - [mason](https://github.com/williamboman/mason.nvim)
+  - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
+  - [nvim-lspconfig](https://www.google.com/search?q=git+neovim/nvim-lspconfig&sourceid=chrome&ie=UTF-8)
+  - [telescope-ui-select](https://github.com/nvim-telescope/telescope-ui-select.nvim) - telescope plugin that displays modal with code actions picker
 - [none-ls](https://github.com/nvimtools/none-ls.nvim) - code formatting settings
+- __Snippets and completions__ - enables popup under the cursor with autocompletion suggestions
+  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - completion engine, that uses external sources for autocompletions
+  - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - snippets for Lua
+  - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - provides autocompletion from LSPs
+  - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) - autocompletion source for buffer words
+  - [cmp-path](https://github.com/hrsh7th/cmp-path) - autocompletion source for files system paths
+  - [lspkind](https://github.com/onsails/lspkind.nvim) - pictograms for autocompletion types
 
 ## Key mappings
+
 | Keymap       |  Association       | Description                                   |
 |--------------|--------------------|-----------------------------------------------|
 | `<leader>tf` | _telescope find_   | Search for the file in current dir            |
