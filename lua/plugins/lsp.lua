@@ -1,14 +1,19 @@
+---@diagnostic disable: undefined-global
 return {
     {
-        'williamboman/mason.nvim',
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            {'williamboman/mason.nvim',
+                config = true, opts = {}
+            },
+            {'williamboman/mason-lspconfig.nvim'},
+        },
+        lazy = false,
         config = function()
-            require('mason').setup()
-        end,
-    },
-    {
-        'williamboman/mason-lspconfig.nvim',
-        config = function()
-            require('mason-lspconfig').setup {
+
+            local mason_lspconfig = require('mason-lspconfig')
+
+            mason_lspconfig.setup {
                 ensure_installed = {
                     -- lua
                     'lua_ls',
@@ -17,20 +22,40 @@ return {
                     -- go
                     'gopls',
                     -- salesforce,
-                    'apex_ls'
+                    'apex_ls',
                 },
                 auto_install = true,
             }
-        end,
-    },
-    {
-        'neovim/nvim-lspconfig',
-        config = function()
+
+            require('cmp').setup {
+                sources = {
+                    { name = 'nvim_lsp' },
+                },
+            }
+
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
             local lspconfig = require 'lspconfig'
 
-            lspconfig.lua_ls.setup {}
-            lspconfig.tsserver.setup {}
-            lspconfig.gopls.setup {}
+            lspconfig.lua_ls.setup {
+                capabilities = capabilities,
+            }
+            lspconfig.tsserver.setup {
+                capabilities = capabilities,
+            }
+            lspconfig.gopls.setup {
+                capabilities = capabilities,
+            }
+            lspconfig.apex_ls.setup {
+                apex_enable_semantic_errors = false,
+                apex_enable_completion_statistics = false,
+                filetypes = { 'apex' },
+                root_dir = lspconfig.util.root_pattern 'sfdx-project.json',
+                on_attach = on_attach,
+                capabilities = capabilities,
+                --cmd = { 'java', '-jar', '~/.apex-jorje-lsp.jar' },
+                --apex_jar_path = '/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home',
+            }
 
             vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { desc = 'Go to definition' })
             vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, { desc = 'Go to declaration' })
