@@ -7,6 +7,7 @@
 ## Plugins
 
 - [lazy](https://github.com/folke/lazy.nvim) - package manager
+- [lualine](https://github.com/nvim-lualine/lualine.nvim) - status bar
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) - fuzzy finder
 - [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter) - improved syntax highlighting
 - [harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - mark buffers and switch between them with ease
