@@ -2,7 +2,7 @@
 
 ## Colorscheme
 
-- [kanagawa](https://github.com/rebelot/kanagawa.nvim?tab=readme-ov-file)
+- [catppuccin](https://github.com/catppuccin/nvim)
 
 ## Plugins
 
