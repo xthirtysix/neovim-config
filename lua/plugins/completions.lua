@@ -7,7 +7,6 @@ return {
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
             'onsails/lspkind.nvim', -- icons describing autocomplete entity
-            'saadparwaiz1/cmp_luasnip',
             'rafamadriz/friendly-snippets',
         },
         config = function()
