@@ -11,6 +11,7 @@
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) - fuzzy finder
 - [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter) - improved syntax highlighting
 - [harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - mark buffers and switch between them with ease
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - file explorer for neovim
 - __LSP Suite__ - enables Language Server Protocol features
   - [mason](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
