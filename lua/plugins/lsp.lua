@@ -38,15 +38,23 @@ return {
 
             local lspconfig = require 'lspconfig'
 
-            lspconfig.lua_ls.setup {
-                capabilities = capabilities,
+            local lsps = {
+                [1] = 'tsserver',
+                [2] = 'cssls',
+                [3] = 'html',
+                [4] = 'lwc_ls',
+                [5] = 'gopls',
+                [6] = 'lua_ls'
             }
-            lspconfig.tsserver.setup {
-                capabilities = capabilities,
-            }
-            lspconfig.gopls.setup {
-                capabilities = capabilities,
-            }
+
+            -- setup LSP autocompletions
+            for _, lsp in pairs(lsps) do
+                lspconfig[lsp].setup({
+                    capabilities = capabilities,
+                })
+            end
+
+            -- Salesforce
             lspconfig.apex_ls.setup {
                 apex_enable_semantic_errors = false,
                 apex_enable_completion_statistics = false,
