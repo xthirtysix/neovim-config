@@ -5,8 +5,11 @@ return {
         priority = 1000,
         config = function()
             local catppuccin = require 'catppuccin'
+            local colors = require('catppuccin.palettes').get_palette()
+            colors.none = 'NONE'
 
             catppuccin.setup {
+                transparent_background = true,
                 show_end_of_buffer = true,
                 styles = {                   -- Handles the styles of general hi groups (see `:h highlight-args`):
                     comments = { 'italic' }, -- Change the style of comments
@@ -19,8 +22,6 @@ return {
                     numbers = {},
                     booleans = {},
                     properties = {},
-                    types = {},
-                    operators = {},
                 },
                 integrations = {
                     cmp = true,
@@ -53,7 +54,7 @@ return {
                 },
             }
 
-            vim.cmd.colorscheme('catppuccin')
+            vim.cmd.colorscheme 'catppuccin'
         end,
     },
 }

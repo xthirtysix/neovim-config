@@ -8,10 +8,10 @@
 
 - [lazy](https://github.com/folke/lazy.nvim) - package manager
 - [lualine](https://github.com/nvim-lualine/lualine.nvim) - status bar
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - file explorer for neovim
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) - fuzzy finder
 - [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter) - improved syntax highlighting
 - [harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - mark buffers and switch between them with ease
-- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - file explorer for neovim
 - __LSP Suite__ - enables Language Server Protocol features
   - [mason](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
@@ -30,6 +30,7 @@
 
 | Keymap       |  Association       | Description                                   |
 |--------------|--------------------|-----------------------------------------------|
+| `<leader>e`  | _explorer_         | Open file explorer                            |
 | `<leader>tf` | _telescope find_   | Search for the file in current dir            |
 | `<leader>tg` | _telescope grep_   | Search for the code snippet in current dir    |
 | `<leader>ha` | _harpoon add_      | Add current file to the list                  |
