@@ -11,7 +11,7 @@ return {
             catppuccin.setup {
                 transparent_background = true,
                 show_end_of_buffer = true,
-                styles = {                   -- Handles the styles of general hi groups (see `:h highlight-args`):
+                styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
                     comments = { 'italic' }, -- Change the style of comments
                     conditionals = { 'italic' },
                     loops = { 'italic' },
@@ -52,6 +52,12 @@ return {
                         },
                     },
                 },
+                custom_highlights = function(theme_colors)
+                    return {
+                        LineNr = { fg = theme_colors.overlay1 },
+                        Whitespace = { fg = theme_colors.surface2 },
+                    }
+                end,
             }
 
             vim.cmd.colorscheme 'catppuccin'
