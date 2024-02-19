@@ -28,10 +28,10 @@
   - [cmp-path](https://github.com/hrsh7th/cmp-path) - autocompletion source for files system paths
   - [lspkind](https://github.com/onsails/lspkind.nvim) - pictograms for autocompletion types
 - __mini.nvim suite__ - mini-modules that provides different functionality
-  - [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md)
-  - [mini.comment](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md)
-  - [mini.indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md)
-  - [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md)
+  - [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md) - enables animations for common actions
+  - [mini.comment](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md) - allows to comment code lines easily
+  - [mini.indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md) - renders indent-line for focused code block
+  - [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md) - creates pairs for brackets and quotes
 
 ## Key mappings
 
