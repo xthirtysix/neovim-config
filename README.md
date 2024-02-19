@@ -14,7 +14,7 @@
 - [harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - mark buffers and switch between them with ease
 - [vim-go](https://github.com/fatih/vim-go) - go lang support and utils
 - [git-signs](https://github.com/lewis6991/gitsigns.nvim) - decorations for changed, added, removed lines
-- __LSP Suite__ - enables Language Server Protocol features
+- __LSP suite__ - enables Language Server Protocol features
   - [mason](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
   - [nvim-lspconfig](https://www.google.com/search?q=git+neovim/nvim-lspconfig&sourceid=chrome&ie=UTF-8)
@@ -27,6 +27,11 @@
   - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) - autocompletion source for buffer words
   - [cmp-path](https://github.com/hrsh7th/cmp-path) - autocompletion source for files system paths
   - [lspkind](https://github.com/onsails/lspkind.nvim) - pictograms for autocompletion types
+  __mini.nvim suite__ - mini-modules that provides different functionality
+  - [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md)
+  - [mini.comment](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md)
+  - [mini.indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md)
+  - [mini.pairs](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md)
 
 ## Key mappings
 
@@ -45,3 +50,5 @@
 | `<leader>li` | _lsp info_         | Display info about entity under cursor        |
 | `<leader>lf` | _lsp format_       | Format opened file                            |
 | `<leader>ca` | _code actions_     | Display modal with possible code action       |
+| `gc{*hjkl}`  | _comment_          | Comment code in direction                     |
+| `gcc`        | _comment code_     | Comment single line                           |
