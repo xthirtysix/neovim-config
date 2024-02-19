@@ -27,7 +27,7 @@
   - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) - autocompletion source for buffer words
   - [cmp-path](https://github.com/hrsh7th/cmp-path) - autocompletion source for files system paths
   - [lspkind](https://github.com/onsails/lspkind.nvim) - pictograms for autocompletion types
-  __mini.nvim suite__ - mini-modules that provides different functionality
+- __mini.nvim suite__ - mini-modules that provides different functionality
   - [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md)
   - [mini.comment](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md)
   - [mini.indentscope](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-indentscope.md)
@@ -52,3 +52,5 @@
 | `<leader>ca` | _code actions_     | Display modal with possible code action       |
 | `gc{*hjkl}`  | _comment_          | Comment code in direction                     |
 | `gcc`        | _comment code_     | Comment single line                           |
+| `[i`         | _start indent_     | Go to the beginning of indent                 |
+| `]i`         | _end indent_       | Go to the end of indent                       |
