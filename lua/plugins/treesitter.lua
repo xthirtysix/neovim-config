@@ -1,7 +1,7 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
-        dependencies = {'windwp/nvim-ts-autotag'},
+        dependencies = { 'windwp/nvim-ts-autotag' },
         build = ':TSUpdate',
         config = function()
             local configs = require 'nvim-treesitter.configs'
@@ -9,7 +9,12 @@ return {
                 ensure_installed = { 'lua', 'go', 'javascript', 'html', 'css' },
                 highlight = { enable = true },
                 indent = { enable = true },
-                autotag = { enable = true }
+                autotag = {
+                    enable = true,
+                    enable_rename = true,
+                    enable_close = true,
+                    enable_close_on_slash = true,
+                },
             }
         end,
     },
