@@ -9,6 +9,7 @@ return {
                 opts = {},
             },
             { 'williamboman/mason-lspconfig.nvim' },
+            { 'brenoprata10/nvim-highlight-colors' },
         },
         lazy = false,
         config = function()
@@ -44,14 +45,14 @@ return {
                 [3] = 'html',
                 [4] = 'lwc_ls',
                 [5] = 'gopls',
-                [6] = 'lua_ls'
+                [6] = 'lua_ls',
             }
 
             -- setup LSP autocompletions
             for _, lsp in pairs(lsps) do
-                lspconfig[lsp].setup({
+                lspconfig[lsp].setup {
                     capabilities = capabilities,
-                })
+                }
             end
 
             -- Salesforce
@@ -62,6 +63,12 @@ return {
                 root_dir = lspconfig.util.root_pattern 'sfdx-project.json',
                 on_attach = on_attach,
                 capabilities = capabilities,
+            }
+
+            -- Highlight CSS colors
+            require('nvim-highlight-colors').setup {
+                render = 'background', -- or 'foreground' or 'first_column'
+                enable_named_colors = true,
             }
 
             vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { desc = 'Go to definition' })
