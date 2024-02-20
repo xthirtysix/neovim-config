@@ -14,6 +14,7 @@
 - [harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - mark buffers and switch between them with ease
 - [vim-go](https://github.com/fatih/vim-go) - go lang support and utils
 - [git-signs](https://github.com/lewis6991/gitsigns.nvim) - decorations for changed, added, removed lines
+- [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors) - highlight CSS colors
 - __LSP suite__ - enables Language Server Protocol features
   - [mason](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
