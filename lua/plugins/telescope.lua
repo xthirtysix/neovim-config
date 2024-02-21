@@ -4,6 +4,8 @@ return {
         tag = '0.1.5',
         dependencies = { 'nvim-lua/plenary.nvim' },
         config = function()
+            require('plenary.filetype').add_file 'sf_type'
+
             local builtin = require 'telescope.builtin'
 
             vim.keymap.set(
