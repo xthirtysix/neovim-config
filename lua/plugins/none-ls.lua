@@ -9,14 +9,15 @@ return {
             sources = {
                 -- JS/TS
                 null_ls.builtins.formatting.prettier.with {
-                    filetypes = { 'apex' },
-                    extra_args = { '--plugin=prettier-plugin-apex', '--write' },
+                    filetypes = { 'js', 'html' },
+                    extra_filetypes = { 'apex' },
+                    extra_args = { '--plugin=prettier-plugin-apex', '--write', '--single-attribute-per-line=true' },
                 },
-                null_ls.builtins.diagnostics.pmd.with({
-                    filetypes = {"apex"},
-                    args = {"check", "--dir", "$ROOT", "--format", "json"},
-                    extra_args = {"--rulesets", "apex_ruleset.xml"}
-                }),
+                null_ls.builtins.diagnostics.pmd.with {
+                    filetypes = { 'apex' },
+                    args = { 'check', '--dir', '$ROOT', '--format', 'json' },
+                    extra_args = { '--rulesets', 'apex_ruleset.xml' },
+                },
                 -- Lua
                 null_ls.builtins.formatting.stylua,
                 -- Go
