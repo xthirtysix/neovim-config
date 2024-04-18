@@ -15,6 +15,7 @@
 - [vim-go](https://github.com/fatih/vim-go) - go lang support and utils
 - [git-signs](https://github.com/lewis6991/gitsigns.nvim) - decorations for changed, added, removed lines
 - [nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors) - highlight CSS colors
+- [nvim-px-to-rem](https://github.com/jsongerber/nvim-px-to-rem) - convert css px to rem
 - __LSP suite__ - enables Language Server Protocol features
   - [mason](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file)
@@ -51,6 +52,7 @@
 | `<leader>li` | _lsp info_         | Display info about entity under cursor        |
 | `<leader>lf` | _lsp format_       | Format opened file                            |
 | `<leader>ca` | _code actions_     | Display modal with possible code action       |
+| `<leader>pxl`| _px line_          | Convert px to rem in line under cursor        |
 | `gc{*hjkl}`  | _comment_          | Comment code in direction                     |
 | `gcc`        | _comment code_     | Comment single line                           |
 | `[i`         | _start indent_     | Go to the beginning of indent                 |
