@@ -21,6 +21,7 @@ return {
                     'lua_ls',
                     -- js/ts
                     'tsserver',
+                    'volar',
                     -- go
                     'gopls',
                     -- salesforce,
@@ -46,6 +47,8 @@ return {
                 [4] = 'lwc_ls',
                 [5] = 'gopls',
                 [6] = 'lua_ls',
+                [7] = 'volar',
+                [8] = 'apex_ls'
             }
 
             -- setup LSP autocompletions

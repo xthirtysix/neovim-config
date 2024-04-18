@@ -9,7 +9,7 @@ return {
             sources = {
                 -- JS/TS
                 null_ls.builtins.formatting.prettier.with {
-                    filetypes = { 'js', 'html' },
+                    filetypes = { 'js', 'html', 'vue' },
                     extra_filetypes = { 'apex' },
                     extra_args = { '--plugin=prettier-plugin-apex', '--write', '--single-attribute-per-line=true' },
                 },
