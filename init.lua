@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
 local options = {
+    background = 'dark',
     filetype = 'on',
     signcolumn = 'yes',
     tabstop = 4,
