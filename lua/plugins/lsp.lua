@@ -48,7 +48,7 @@ return {
                 [5] = 'gopls',
                 [6] = 'lua_ls',
                 [7] = 'volar',
-                [8] = 'apex_ls'
+                [8] = 'apex_ls',
             }
 
             -- setup LSP autocompletions
@@ -66,6 +66,61 @@ return {
                 root_dir = lspconfig.util.root_pattern 'sfdx-project.json',
                 on_attach = on_attach,
                 capabilities = capabilities,
+            }
+
+            -- typescript
+            local mason_registry = require 'mason-registry'
+            local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
+
+            lspconfig.tsserver.setup {
+                init_options = {
+                    plugins = {
+                        {
+                            name = '@vue/typescript-plugin',
+                            location = '/opt/homebrew/lib/node_modules/@vue/typescript-plugin',
+                            languages = {
+                                'javascript',
+                                'typescript',
+                                'vue',
+                            },
+                        },
+                    },
+                },
+                filetypes = {
+                    'javascript',
+                    'typescript',
+                    'vue',
+                },
+            }
+
+            local util = require 'lspconfig.util'
+
+            local volar_init_options = {
+                typescript = {
+                    tsdk = '',
+                },
+            }
+
+            local function get_typescript_server_path(root_dir)
+                local project_root = util.find_node_modules_ancestor(root_dir)
+                return project_root and (util.path.join(project_root, 'node_modules', 'typescript', 'lib')) or ''
+            end
+
+            -- No need to set `hybridMode` to `true` as it's the default value
+            lspconfig.volar.setup {
+                cmd = { 'vue-language-server', '--stdio' },
+                filetypes = { 'vue' },
+                root_dir = util.root_pattern 'package.json',
+                init_options = volar_init_options,
+                on_new_config = function(new_config, new_root_dir)
+                    if
+                        new_config.init_options
+                        and new_config.init_options.typescript
+                        and new_config.init_options.typescript.tsdk == ''
+                    then
+                        new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
+                    end
+                end,
             }
 
             -- Highlight CSS colors
