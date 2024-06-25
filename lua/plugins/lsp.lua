@@ -129,6 +129,7 @@ return {
                 enable_named_colors = true,
             }
 
+            vim.keymap.set('n', '<leader>dd', vim.diagnostic.open_float, opts)
             vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, { desc = 'Go to definition' })
             vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, { desc = 'Go to declaration' })
             vim.keymap.set(
